@@ -3,7 +3,7 @@
 ##########################################################################################
 
 # Is this a cache mod?
-CACHEMOD=true
+CACHEMOD=false
 
 # This will be the folder name under /magisk or /cache/magisk
 # This should also be the same as the id in your module.prop to prevent confusion
