@@ -6,4 +6,4 @@ author=guitardedhero, putridfoetus(adapted)
 description=Viper|Atmos 5.4 Stock adapted from the N6 V4A thread
 support=
 donate=
-cacheModule=false
+cacheModule=true
