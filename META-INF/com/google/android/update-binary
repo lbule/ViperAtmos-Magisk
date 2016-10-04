@@ -265,6 +265,8 @@ fi
 # Create mod paths
 rm -rf $MODPATH
 mkdir -p $MODPATH
+# Create cache path for post-fs.sh
+mkdir -p $CACHEPATH/$MODID
 
 # Copy files
 ui_print "- Copying files"
@@ -353,8 +355,8 @@ if ($BOOTMODE); then
 fi
 
 # post-fs mode scripts
-if ($CACHEMOD) && ($POSTFS); then
-  cp -af $INSTALLER/common/post-fs.sh $MODPATH/post-fs.sh
+if ($POSTFS); then
+  cp -af $INSTALLER/common/post-fs.sh $CACHEPATH/$MODID/post-fs.sh
 fi
 
 # post-fs-data mode scripts
