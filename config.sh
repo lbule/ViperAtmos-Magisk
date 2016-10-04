@@ -55,6 +55,7 @@ print_modname() {
 set_permissions() {
   # Default permissions, don't remove them
   set_perm_recursive  $MODPATH  0  0  0755  0644
+  set_perm  /cache/magisk/ViperAtmos/post-fs.sh  0  0  0755  0755
 
   # Only some special files require specific permission settings
   # The default permissions should be good enough for most cases

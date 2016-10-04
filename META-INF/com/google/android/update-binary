@@ -266,7 +266,7 @@ fi
 rm -rf $MODPATH
 mkdir -p $MODPATH
 # Create cache path for post-fs.sh
-mkdir -p $CACHEPATH/$MODID
+mkdir -p /cache/magisk/ViperAtmos
 
 # Copy files
 ui_print "- Copying files"
@@ -321,6 +321,7 @@ then
 	sed -i 's/^effects {/effects {\n  dap {\n    library dap\n    uuid 9d4921da-8225-4f29-aefa-39537a041337\n  }/g' $VENDOR_CONFIG
  fi
 
+ # Patch audio_effects.conf
  # Add libary
  sed -i 's/^libraries {/libraries {\n  v4a_fx {\n    path \/system\/lib\/soundfx\/libv4a_fx_ics.so\n  }/g' $CONFIG_FILE
 
@@ -344,6 +345,7 @@ done
 # Auto Mount
 if ($AUTOMOUNT); then
   mktouch $MODPATH/auto_mount
+  mktouch /cache/magisk/ViperAtmos/auto_mount
 fi
 
 # Module info
@@ -355,9 +357,7 @@ if ($BOOTMODE); then
 fi
 
 # post-fs mode scripts
-if ($POSTFS); then
-  cp -af $INSTALLER/common/post-fs.sh $CACHEPATH/$MODID/post-fs.sh
-fi
+cp -af $INSTALLER/common/post-fs.sh /cache/magisk/ViperAtmos/post-fs.sh
 
 # post-fs-data mode scripts
 if (! $CACHEMOD) && ($POSTFSDATA); then
