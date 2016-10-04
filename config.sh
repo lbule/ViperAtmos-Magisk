@@ -1,35 +1,6 @@
 ##########################################################################################
-#
-# Magisk
-# by topjohnwu
-# 
-# This is a template zip for developers
-#
-##########################################################################################
-##########################################################################################
-# 
-# Instructions:
-# 
-# 1. Place your files into system folder
-# 2. Fill in all sections in this file
-# 3. For advanced features, add commands into the script files under common:
-#    post-fs.sh, post-fs-data.sh, service.sh
-# 4. Change the "module.prop" under common with the info of your module
-# 
-##########################################################################################
-##########################################################################################
-# 
-# Limitations:
-# 1. Can not place any new items under /system root!! e.g. /system/newfile, /system/newdir
-#    Magisk will delete these items at boot.
-# 
-##########################################################################################
-
-##########################################################################################
 # Defines
 ##########################################################################################
-
-# NOTE: This part has to be adjusted to fit your own needs
 
 # Is this a cache mod?
 CACHEMOD=true
