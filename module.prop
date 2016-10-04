@@ -1,9 +1,9 @@
-id=template
-name=Template Module
+id=ViperAtmos
+name=Viper|Atmos for Magisk
 version=v1
 versionCode=1
-author=topjohnwu
-description=A short description
-support=http://forum.xda-developers.com/showthread.php?t=3432382
-donate=http://topjohnwu.github.io/donate
-cacheModule=false
+author=guitardedhero, putridfoetus(adapted)
+description=Viper|Atmos 5.4 Stock adapted from the N6 V4A thread
+support=
+donate=
+cacheModule=true
