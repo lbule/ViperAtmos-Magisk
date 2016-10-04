@@ -32,21 +32,21 @@
 # NOTE: This part has to be adjusted to fit your own needs
 
 # Is this a cache mod?
-CACHEMOD=false
+CACHEMOD=true
 
 # This will be the folder name under /magisk or /cache/magisk
 # This should also be the same as the id in your module.prop to prevent confusion
-MODID=template
+MODID=ViperAtmos
 
 # Set to true if you need automount
 # Most mods would like it to be enabled
 AUTOMOUNT=true
 
 # Set to true if you need post-fs script (Only available in cache mods)
-POSTFS=false
+POSTFS=true
 
 # Set to true if you need post-fs-data script (Only available in non-cache mods)
-POSTFSDATA=false
+POSTFSDATA=true
 
 # Set to true if you need late_start service script (Only available in non-cache mods)
 LATESTARTSERVICE=false
@@ -59,7 +59,7 @@ LATESTARTSERVICE=false
 
 print_modname() {
   ui_print "*******************************"
-  ui_print "     Magisk Module Template    "
+  ui_print "      Viper|Atmos 5.4 Stock    "
   ui_print "*******************************"
 }
 
@@ -72,16 +72,8 @@ print_modname() {
 # Directories listed here however, will be directly mounted to the correspond directory in the system
 
 # This is an example
-REPLACE="
-/system/app/Youtube
-/system/priv-app/SystemUI
-/system/priv-app/Settings
-/system/framework
-"
 
 # Construct your own list
-REPLACE="
-"
 
 ##########################################################################################
 # Permissons
@@ -105,4 +97,8 @@ set_permissions() {
   # set_perm  $MODPATH/system/bin/app_process32   0       2000    0755         u:object_r:zygote_exec:s0
   # set_perm  $MODPATH/system/bin/dex2oat         0       2000    0755         u:object_r:dex2oat_exec:s0
   # set_perm  $MODPATH/system/lib/libart.so       0       0       0644
+  
+  # Custom permissions
+  set_perm_recursive $MODPATH/system/bin  0  2000  0755  0755
+  set_perm_recursive $MODPATH/system/xbin  0  0  0755  0755
 }
