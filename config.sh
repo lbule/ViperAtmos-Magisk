@@ -14,7 +14,7 @@ MODID=ViperAtmos
 AUTOMOUNT=true
 
 # Set to true if you need post-fs script (Only available in cache mods)
-POSTFS=true
+POSTFS=false
 
 # Set to true if you need post-fs-data script (Only available in non-cache mods)
 POSTFSDATA=true
@@ -57,7 +57,7 @@ REPLACE="
 set_permissions() {
   # Default permissions, don't remove them
   set_perm_recursive  $MODPATH  0  0  0755  0644
-  set_perm_recursive  /cache/magisk/ViperAtmos  0  0  0755  0644
+  set_perm_recursive  $CACHEPATH/$MODID  0  0  0755  0644
 
   # Only some special files require specific permission settings
   # The default permissions should be good enough for most cases
