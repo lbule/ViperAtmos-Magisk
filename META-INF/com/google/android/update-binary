@@ -274,8 +274,8 @@ unzip -o "$ZIP" system/* -d $MODPATH
 
 # Copy confs from /system to $MODPATH/system
 ui_print "- Copying and editing .confs..."
-cp /system/etc/audio_effects.conf $MODPATH/system/etc/audio_effects.conf
-cp /system/etc/audio_policy.conf $MODPATH/system/etc/audio_policy.conf
+cp -af /system/etc/audio_effects.conf $MODPATH/system/etc/audio_effects.conf
+cp -af /system/etc/audio_policy.conf $MODPATH/system/etc/audio_policy.conf
 
 # Edit .confs
 # Normal/vendor config locations
