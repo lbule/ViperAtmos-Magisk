@@ -274,77 +274,78 @@ unzip -o "$ZIP" system/* -d $MODPATH
 
 # Copy confs from /system to $MODPATH/system
 ui_print "- Copying and editing .confs..."
-cp /system/etc/audio_effects.conf $MODPATH/system/etc/audio_effects.conf
-cp /system/etc/audio_policy.conf $MODPATH/system/etc/audio_policy.conf
+cp -af /system/etc/audio_effects.conf $MODPATH/system/etc/audio_effects.conf
+cp -af /system/etc/audio_policy.conf $MODPATH/system/etc/audio_policy.conf
 
 # Edit .confs
 # Normal/vendor config locations
-CONFIG_FILE=$MODPATH/system/etc/audio_effects.conf
-VENDOR_CONFIG=$MODPATH/system/vendor/etc/audio_effects.conf
-AUDIO_POLICY=$MODPATH/system/etc/audio_policy.conf
+CONF=$MODPATH/system/etc/audio_effects.conf
+VCONF=$MODPATH/system/vendor/etc/audio_effects.conf
+AUDPOL=$MODPATH/system/etc/audio_policy.conf
 
 # If vendor exists, patch it
-if [ -f $VENDOR_CONFIG ];
+if [ -f $VCONF ];
 then
 	# Remove library & effect
- sed -i '/v4a_fx {/,/}/d' $VENDOR_CONFIG
+ sed -i '/v4a_fx {/,/}/d' $VCONF
 
  # Remove library & effect
- sed -i '/v4a_standard_fx {/,/}/d' $VENDOR_CONFIG
+ sed -i '/v4a_standard_fx {/,/}/d' $VCONF
 
  # Remove library & effect
- sed -i '/dap {/,/}/d' $VENDOR_CONFIG
+ sed -i '/dap {/,/}/d' $VCONF
   fi
  
  # Remove library & effect
- sed -i '/v4a_fx {/,/}/d' $CONFIG_FILE
+ sed -i '/v4a_fx {/,/}/d' $CONF
 
  # Remove library & effect
- sed -i '/v4a_standard_fx {/,/}/d' $CONFIG_FILE
+ sed -i '/v4a_standard_fx {/,/}/d' $CONF
 
  # Remove library & effect
- sed -i '/dap {/,/}/d' $CONFIG_FILE
+ sed -i '/dap {/,/}/d' $CONF
 
 # If vendor exists, patch it
-if [ -f $VENDOR_CONFIG ];
+if [ -f $VCONF ];
 then
  # Add libary
-	sed -i 's/^libraries {/libraries {\n  v4a_fx {\n    path \/system\/lib\/soundfx\/libv4a_fx_ics.so\n  }/g' $VENDOR_CONFIG
+	sed -i 's/^libraries {/libraries {\n  v4a_fx {\n    path \/system\/lib\/soundfx\/libv4a_fx_ics.so\n  }/g' $VCONF
 	
 	# Add effect
-	sed -i 's/^effects {/effects {\n  v4a_standard_fx {\n    library v4a_fx\n    uuid 41d3c987-e6cf-11e3-a88a-11aba5d5c51b\n  }/g' $VENDOR_CONFIG
+	sed -i 's/^effects {/effects {\n  v4a_standard_fx {\n    library v4a_fx\n    uuid 41d3c987-e6cf-11e3-a88a-11aba5d5c51b\n  }/g' $VCONF
 
  # Add library
- sed -i 's/^libraries {/libraries {\n  dap {\n    path \/system\/lib\/soundfx\/libswdap-mod.so\n  }/g' $VENDOR_CONFIG
+ sed -i 's/^libraries {/libraries {\n  dap {\n    path \/system\/lib\/soundfx\/libswdap-mod.so\n  }/g' $VCONF
 	
 	# Add effect
-	sed -i 's/^effects {/effects {\n  dap {\n    library dap\n    uuid 9d4921da-8225-4f29-aefa-39537a041337\n  }/g' $VENDOR_CONFIG
+	sed -i 's/^effects {/effects {\n  dap {\n    library dap\n    uuid 9d4921da-8225-4f29-aefa-39537a041337\n  }/g' $VCONF
  fi
 
  # Patch audio_effects.conf
  # Add libary
- sed -i 's/^libraries {/libraries {\n  v4a_fx {\n    path \/system\/lib\/soundfx\/libv4a_fx_ics.so\n  }/g' $CONFIG_FILE
+ sed -i 's/^libraries {/libraries {\n  v4a_fx {\n    path \/system\/lib\/soundfx\/libv4a_fx_ics.so\n  }/g' $CONF
 
  # Add effect
- sed -i 's/^effects {/effects {\n  v4a_standard_fx {\n    library v4a_fx\n    uuid 41d3c987-e6cf-11e3-a88a-11aba5d5c51b\n  }/g' $CONFIG_FILE
+ sed -i 's/^effects {/effects {\n  v4a_standard_fx {\n    library v4a_fx\n    uuid 41d3c987-e6cf-11e3-a88a-11aba5d5c51b\n  }/g' $CONF
 
  # Add libary
- sed -i 's/^libraries {/libraries {\n  dap {\n    path \/system\/lib\/soundfx\/libswdap-mod.so\n  }/g' $CONFIG_FILE
+ sed -i 's/^libraries {/libraries {\n  dap {\n    path \/system\/lib\/soundfx\/libswdap-mod.so\n  }/g' $CONF
 
  # Add effect
- sed -i 's/^effects {/effects {\n  dap {\n    library dap\n    uuid 9d4921da-8225-4f29-aefa-39537a041337\n  }/g' $CONFIG_FILE
+ sed -i 's/^effects {/effects {\n  dap {\n    library dap\n    uuid 9d4921da-8225-4f29-aefa-39537a041337\n  }/g' $CONF
 
 # Remove deep_buffer
-sed -i '/deep_buffer {/,/}/d' $AUDIO_POLICY
+sed -i '/deep_buffer {/,/}/d' $AUDPOL
 
-# Handle replace folders
-for TARGET in $REPLACE; do
-  mktouch $MODPATH$TARGET/.replace
-done
+# Handle replace folders; not replacing anything, remove function
+# for TARGET in $REPLACE; do
+#   mktouch $MODPATH$TARGET/.replace
+# done
 
 # Auto Mount
 if ($AUTOMOUNT); then
   mktouch $MODPATH/auto_mount
+  # Auto mount post-fs.sh
   mktouch $CACHEPATH/$MODID/auto_mount
 fi
 
