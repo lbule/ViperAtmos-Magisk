@@ -266,7 +266,7 @@ fi
 rm -rf $MODPATH
 mkdir -p $MODPATH
 # Create cache path for post-fs.sh
-mkdir -p /cache/magisk/ViperAtmos
+mkdir -p $CACHEPATH/$MODID
 
 # Copy files
 ui_print "- Copying files"
@@ -345,7 +345,7 @@ done
 # Auto Mount
 if ($AUTOMOUNT); then
   mktouch $MODPATH/auto_mount
-  mktouch /cache/magisk/ViperAtmos/auto_mount
+  mktouch $CACHEPATH/$MODID/auto_mount
 fi
 
 # Module info
@@ -357,7 +357,7 @@ if ($BOOTMODE); then
 fi
 
 # post-fs mode scripts
-cp -af $INSTALLER/common/post-fs.sh /cache/magisk/ViperAtmos/post-fs.sh
+cp -af $INSTALLER/common/post-fs.sh $CACHEPATH/$MODID/post-fs.sh
 
 # post-fs-data mode scripts
 if (! $CACHEMOD) && ($POSTFSDATA); then
