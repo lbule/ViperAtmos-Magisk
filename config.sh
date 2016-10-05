@@ -45,6 +45,8 @@ print_modname() {
 # This is an example
 
 # Construct your own list
+REPLACE="
+"
 
 ##########################################################################################
 # Permissons
