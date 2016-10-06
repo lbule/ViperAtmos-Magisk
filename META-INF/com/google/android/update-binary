@@ -294,8 +294,9 @@ then
 
  # Remove library & effect
  sed -i '/dap {/,/}/d' $VCONF
-  fi
- 
+fi
+
+# Patch CONF  
  # Remove library & effect
  sed -i '/v4a_fx {/,/}/d' $CONF
 
@@ -309,19 +310,19 @@ then
 if [ -f $VCONF ];
 then
  # Add libary
-	sed -i 's/^libraries {/libraries {\n  v4a_fx {\n    path \/system\/lib\/soundfx\/libv4a_fx_ics.so\n  }/g' $VCONF
+ sed -i 's/^libraries {/libraries {\n  v4a_fx {\n    path \/system\/lib\/soundfx\/libv4a_fx_ics.so\n  }/g' $VCONF
 	
-	# Add effect
-	sed -i 's/^effects {/effects {\n  v4a_standard_fx {\n    library v4a_fx\n    uuid 41d3c987-e6cf-11e3-a88a-11aba5d5c51b\n  }/g' $VCONF
+ # Add effect
+ sed -i 's/^effects {/effects {\n  v4a_standard_fx {\n    library v4a_fx\n    uuid 41d3c987-e6cf-11e3-a88a-11aba5d5c51b\n  }/g' $VCONF
 
  # Add library
  sed -i 's/^libraries {/libraries {\n  dap {\n    path \/system\/lib\/soundfx\/libswdap-mod.so\n  }/g' $VCONF
 	
-	# Add effect
-	sed -i 's/^effects {/effects {\n  dap {\n    library dap\n    uuid 9d4921da-8225-4f29-aefa-39537a041337\n  }/g' $VCONF
- fi
+ # Add effect
+ sed -i 's/^effects {/effects {\n  dap {\n    library dap\n    uuid 9d4921da-8225-4f29-aefa-39537a041337\n  }/g' $VCONF
+fi
 
- # Patch audio_effects.conf
+# Patch audio_effects.conf
  # Add libary
  sed -i 's/^libraries {/libraries {\n  v4a_fx {\n    path \/system\/lib\/soundfx\/libv4a_fx_ics.so\n  }/g' $CONF
 
@@ -335,7 +336,7 @@ then
  sed -i 's/^effects {/effects {\n  dap {\n    library dap\n    uuid 9d4921da-8225-4f29-aefa-39537a041337\n  }/g' $CONF
 
 # Remove deep_buffer
-sed -i '/deep_buffer {/,/}/d' $AUDPOL
+ sed -i '/deep_buffer {/,/}/d' $AUDPOL
 
 # Handle replace folders; not replacing anything, remove function
 # for TARGET in $REPLACE; do
