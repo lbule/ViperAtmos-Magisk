@@ -1,0 +1,205 @@
+12-31 18:15:34.955   276   291 D Cryptfs : Just triggered post_fs_data
+
+12-31 18:15:34.999   400   400 I /system/bin/tzdatacheck: tzdata file /data/misc/zoneinfo/current/tzdata does not exist. No action required.
+
+12-31 18:15:35.072   409   409 I Magisk  : Magisk post-fs-data mode running... 
+
+12-31 18:15:35.487   307   318 E Sensors : sns_reg.c(255):Invalid ID: 3040
+
+12-31 18:15:35.766   276   287 D vold    : Disk at 7:0 changed
+
+12-31 18:15:35.839   428   428 I Magisk  : Preparing modules 
+
+12-31 18:30:59.606   245   245 I auditd  : type=1403 audit(0.0:2): policy loaded auid=4294967295 ses=4294967295
+
+12-31 18:30:59.606   245   245 W auditd  : type=1404 audit(0.0:3): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+
+12-31 18:31:04.580   257   257 I auditd  : type=1403 audit(0.0:4): policy loaded auid=4294967295 ses=4294967295
+
+12-31 18:15:59.026   276   287 D vold    : Disk at 7:0 changed
+
+12-31 18:15:59.203   276   287 D vold    : Disk at 7:0 changed
+
+12-31 18:15:59.263  8195  8195 I Magisk  : Bind mount dummy system 
+
+12-31 18:15:59.276  8199  8199 I Magisk  : Mount: /magisk/.core/dummy/system/xbin 
+
+12-31 18:15:59.286  8201  8201 I Magisk  : Mount: /magisk/.core/dummy/system/usr/share 
+
+12-31 18:15:59.298  8203  8203 I Magisk  : Mount: /magisk/.core/dummy/system/priv-app 
+
+12-31 18:16:02.573  9179  9179 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libselinux.so 
+
+12-31 18:16:02.605  9181  9181 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libsensorservice.so 
+
+12-31 18:16:02.618  9183  9183 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libserviceutility.so 
+
+12-31 18:16:02.632  9185  9185 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libsigchain.so 
+
+12-31 18:16:02.645  9187  9187 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libskia.so 
+
+12-31 18:16:02.658  9189  9189 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libsoftkeymaster.so 
+
+12-31 18:16:02.672  9191  9191 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libsoftkeymasterdevice.so 
+
+12-31 18:16:02.685  9193  9193 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libsonic.so 
+
+12-31 18:16:02.698  9195  9195 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libsonivox.so 
+
+12-31 18:16:02.712  9197  9197 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libsoundpool.so 
+
+12-31 18:16:02.725  9199  9199 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libsoundtrigger.so 
+
+12-31 18:16:02.738  9201  9201 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libsoundtriggerservice.so 
+
+12-31 18:16:02.752  9203  9203 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libsparse.so 
+
+12-31 18:16:02.764  9205  9205 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libspeexresampler.so 
+
+12-31 18:16:02.778  9207  9207 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libspeexwrapper.so 
+
+12-31 18:16:02.791  9209  9209 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libsqlite.so 
+
+12-31 18:16:02.805  9211  9211 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libsqlite_jni.so 
+
+12-31 18:16:02.819  9213  9213 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libssl.so 
+
+12-31 18:16:02.832  9215  9215 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright.so 
+
+12-31 18:16:02.845  9217  9217 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_amrnb_common.so 
+
+12-31 18:16:02.859  9219  9219 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_avc_common.so 
+
+12-31 18:16:02.873  9221  9221 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_enc_common.so 
+
+12-31 18:16:02.887  9223  9223 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_foundation.so 
+
+12-31 18:16:02.899  9225  9225 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_http_support.so 
+
+12-31 18:16:02.913  9227  9227 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_httplive.so 
+
+12-31 18:16:02.927  9229  9229 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_omx.so 
+
+12-31 18:16:02.941  9231  9231 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_aacdec.so 
+
+12-31 18:16:02.954  9233  9233 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_aacenc.so 
+
+12-31 18:16:02.967  9235  9235 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_amrdec.so 
+
+12-31 18:16:02.980  9237  9237 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_amrnbenc.so 
+
+12-31 18:16:02.994  9239  9239 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_amrwbenc.so 
+
+12-31 18:16:03.009  9241  9241 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_avcdec.so 
+
+12-31 18:16:03.023  9243  9243 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_avcenc.so 
+
+12-31 18:16:03.036  9245  9245 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_flacenc.so 
+
+12-31 18:16:03.049  9247  9247 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_g711dec.so 
+
+12-31 18:16:03.064  9249  9249 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_gsmdec.so 
+
+12-31 18:16:03.078  9251  9251 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_hevcdec.so 
+
+12-31 18:16:03.092  9253  9253 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_mp3dec.so 
+
+12-31 18:16:03.106  9255  9255 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_mpeg2dec.so 
+
+12-31 18:16:03.119  9257  9257 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_mpeg4dec.so 
+
+12-31 18:16:03.134  9259  9259 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_mpeg4enc.so 
+
+12-31 18:16:03.148  9261  9261 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_opusdec.so 
+
+12-31 18:16:03.162  9263  9263 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_rawdec.so 
+
+12-31 18:16:03.176  9265  9265 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_vorbisdec.so 
+
+12-31 18:16:03.190  9267  9267 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_vpxdec.so 
+
+12-31 18:16:03.203  9269  9269 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_soft_vpxenc.so 
+
+12-31 18:16:03.217  9271  9271 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_wfd.so 
+
+12-31 18:16:03.230  9273  9273 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefright_yuv.so 
+
+12-31 18:16:03.244  9275  9275 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstagefrighthw.so 
+
+12-31 18:16:03.258  9277  9277 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libstdc++.so 
+
+12-31 18:16:03.270  9279  9279 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libsupermodel.so 
+
+12-31 18:16:03.284  9281  9281 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libsurfaceflinger.so 
+
+12-31 18:16:03.297  9283  9283 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libsurfaceflinger_ddmconnection.so 
+
+12-31 18:16:03.311  9285  9285 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libsuspend.so 
+
+12-31 18:16:03.325  9287  9287 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libsync.so 
+
+12-31 18:16:03.337  9289  9289 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libsysutils.so 
+
+12-31 18:16:03.352  9291  9291 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libtinyalsa.so 
+
+12-31 18:16:03.365  9293  9293 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libtinycompress.so 
+
+12-31 18:16:03.379  9295  9295 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libtrainingcheck.so 
+
+12-31 18:16:03.393  9297  9297 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libui.so 
+
+12-31 18:16:03.405  9299  9299 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libunwind.so 
+
+12-31 18:16:03.419  9301  9301 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libusbhost.so 
+
+12-31 18:16:03.433  9303  9303 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libutils.so 
+
+12-31 18:16:03.447  9305  9305 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libvirtual.so 
+
+12-31 18:16:03.460  9307  9307 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libvixl.so 
+
+12-31 18:16:03.473  9309  9309 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libvorbisidec.so 
+
+12-31 18:16:03.487  9311  9311 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libwebrtc_audio_preprocessing.so 
+
+12-31 18:16:03.501  9313  9313 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libwebviewchromium_loader.so 
+
+12-31 18:16:03.515  9315  9315 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libwebviewchromium_plat_support.so 
+
+12-31 18:16:03.528  9317  9317 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libwifi-service.so 
+
+12-31 18:16:03.541  9319  9319 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libwilhelm.so 
+
+12-31 18:16:03.554  9321  9321 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libwpa_client.so 
+
+12-31 18:16:03.568  9323  9323 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libxml2.so 
+
+12-31 18:16:03.582  9325  9325 I Magisk  : Mount: /magisk/.core/mirror/system/lib/libz.so 
+
+12-31 18:16:03.597  9327  9327 I Magisk  : Mount: /magisk/.core/mirror/system/lib/soundfx/libaudiopreprocessing.so 
+
+12-31 18:16:03.610  9329  9329 I Magisk  : Mount: /magisk/.core/mirror/system/lib/soundfx/libbundlewrapper.so 
+
+12-31 18:16:03.623  9331  9331 I Magisk  : Mount: /magisk/.core/mirror/system/lib/soundfx/libdownmix.so 
+
+12-31 18:16:03.637  9333  9333 I Magisk  : Mount: /magisk/.core/mirror/system/lib/soundfx/libfmas.so 
+
+12-31 18:16:03.652  9335  9335 I Magisk  : Mount: /magisk/.core/mirror/system/lib/soundfx/libldnhncr.so 
+
+12-31 18:16:03.666  9337  9337 I Magisk  : Mount: /magisk/.core/mirror/system/lib/soundfx/libqcomvisualizer.so 
+
+12-31 18:16:03.680  9339  9339 I Magisk  : Mount: /magisk/.core/mirror/system/lib/soundfx/libqcomvoiceprocessing.so 
+
+12-31 18:16:03.693  9341  9341 I Magisk  : Mount: /magisk/.core/mirror/system/lib/soundfx/libqcomvoiceprocessingdescriptors.so 
+
+12-31 18:16:03.707  9343  9343 I Magisk  : Mount: /magisk/.core/mirror/system/lib/soundfx/libreverbwrapper.so 
+
+12-31 18:16:03.721  9345  9345 I Magisk  : Mount: /magisk/.core/mirror/system/lib/soundfx/libspeakerbundle.so 
+
+12-31 18:16:03.736  9347  9347 I Magisk  : Mount: /magisk/.core/mirror/system/lib/soundfx/libvisualizer.so 
+
+12-31 18:16:03.750  9349  9349 I Magisk  : Mount: /magisk/.core/mirror/system/xbin/dexdump 
+
+12-31 18:16:03.764  9351  9351 I Magisk  : Mount: /magisk/.core/mirror/system/xbin/wlutil 
+
+12-31 18:16:03.822   276   291 D Cryptfs : post_fs_data done
